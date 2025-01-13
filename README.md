@@ -1,6 +1,4 @@
-##### **Please note**: Download the repository as a zipped folder, create a private repository, and upload the content to it. This way, you can collaborate with your teammates effectively.
-
-## 2401PTDS_Classification_Project
+# 2401PTDS_Classification_Project
 
 # Analysing News Articles Dataset
 
@@ -11,19 +9,19 @@
   <img src="https://github.com/ereshia/2401FTDS_Classification_Project/blob/main/announcement-article-articles-copy-coverage.jpg" width="550" height="300" alt=""/>
 </div>
 
-## Table of contents
-* [1. Project Overview](#project-description)
-* [2. Dataset](#dataset)
-* [3. Packages](#packages)
-* [4. Environment](#environment)
-* [5. MLFlow](#mlflow)
-* [6. Streamlit](#streamlit)
-* [7. Team Members](#team-members)
+## Table of content
+1. Objectives 
+2. The dataset 
+3. Creating the coding environment 
+4. Notebook structure 
+5. MLFlow 
+6. Streamlit App
+7. Team members 
 
-## 1. Project Overview <a class="anchor" id="project-description"></a>
+## 1. Objectives  <a class="anchor" id="project-description"></a>
+Objectives: The objective is to deliver a practical demonstration of the implementation of machine learning methods in natural language processing applications. This comprehensive project covers the full workflow, which includes data acquisition, preprocessing, model training, assessment, and ultimate deployment. The key stakeholders involved in the news classification initiative for the news organization consist of the editorial team, IT and technical support, management, and readers. These parties are focused on achieving better content categorization, increased operational efficiency, and an improved user experience.
 
-Your team has been hired as data science consultants for a news outlet to create classification models using Python and deploy it as a web application with Streamlit. 
-The aim is to provide you with a hands-on demonstration of applying machine learning techniques to natural language processing tasks.  This end-to-end project encompasses the entire workflow, including data loading, preprocessing, model training, evaluation, and final deployment. The primary stakeholders for the news classification project for the news outlet could include the editorial team, IT/tech support, management, readers, etc. These groups are interested in improved content categorization, operational efficiency, and enhanced user experience.
+
 
 
 ## 2. Dataset <a class="anchor" id="dataset"></a>
@@ -45,9 +43,9 @@ To carry out all the objectives for this repo, the following necessary dependenc
 + `Matplotlib 3.8.4`
  
 
-## 4. Environment <a class="anchor" id="environment"></a>
+## 4. Creating the coding environment  <a class="anchor" id="environment"></a>
 
-It's highly recommended to use a virtual environment for your projects, there are many ways to do this; we've outlined one such method below. Make sure to regularly update this section. This way, anyone who clones your repository will know exactly what steps to follow to prepare the necessary environment. The instructions provided here should enable a person to clone your repo and quickly get started.
+
 
 ### Create the new evironment - you only need to do this once
 
@@ -72,78 +70,16 @@ MLOps, which stands for Machine Learning Operations, is a practice focused on ma
 
 - Please have a look here and follow the instructions: https://www.mlflow.org/docs/2.7.1/quickstart.html#quickstart
 
-## 6. Streamlit<a class="anchor" id="streamlit"></a>
-
-### What is Streamlit?
-
-[Streamlit](https://www.streamlit.io/)  is a framework that acts as a web server with dynamic visuals, multiple responsive pages, and robust deployment of your models.
-
-In its own words:
-> Streamlit ... is the easiest way for data scientists and machine learning engineers to create beautiful, performant apps in only a few hours!  All in pure Python. All for free.
-
-> It’s a simple and powerful app model that lets you build rich UIs incredibly quickly.
-
-[Streamlit](https://www.streamlit.io/)  takes away much of the background work needed in order to get a platform which can deploy your models to clients and end users. Meaning that you get to focus on the important stuff (related to the data), and can largely ignore the rest. This will allow you to become a lot more productive.  
-
-##### Description of files
-
-For this repository, we are only concerned with a single file:
-
-| File Name              | Description                       |
-| :--------------------- | :--------------------             |
-| `base_app.py`          | Streamlit application definition. |
-
-
-#### 6.1 Running the Streamlit web app on your local machine
-
-As a first step to becoming familiar with our web app's functioning, we recommend setting up a running instance on your own local machine. To do this, follow the steps below by running the given commands within a Git bash (Windows), or terminal (Mac/Linux):
-
-- Ensure that you have the prerequisite Python libraries installed on your local machine:
-
- ```bash
- pip install -U streamlit numpy pandas scikit-learn
- ```
-
-- Navigate to the base of your repo where your base_app.py is stored, and start the Streamlit app.
-
- ```bash
- cd 2401PTDS_Classification_Project/Streamlit/
- streamlit run base_app.py
- ```
-
- If the web server was able to initialise successfully, the following message should be displayed within your bash/terminal session:
-
-```
-  You can now view your Streamlit app in your browser.
-
-    Local URL: http://localhost:8501
-    Network URL: http://192.168.43.41:8501
-```
-You should also be automatically directed to the base page of your web app. This should look something like:
-
-<div id="s_image" align="center">
-  <img src="https://github.com/ereshia/2401FTDS_Classification_Project/blob/main/Streamlit_image.png" width="850" height="400" alt=""/>
-</div>
-
-Congratulations! You've now officially deployed your first web application!
-
-#### 6.2 Deploying your Streamlit web app
-
-- To deploy your app for all to see, click on `deploy`.
-  
-- Please note: If it's your first time deploying it will redirect you to set up an account first. Please follow the instructions.
+## 6. Streamlit App
 
 ## 7. Team Members<a class="anchor" id="team-members"></a>
 
 | Name                                                                                        |  Email              
 |---------------------------------------------------------------------------------------------|--------------------             
-| [Jana Liebenberg-Fouche](https://github.com/Jana-Liebenberg)                                | jliebenberg-fouche@sandtech.com
-| [Edmund Dotsey](https://github.com/Edotsey)                                                 | edotsey@sandtech.com
-| [Farayi Myambo](https://github.com/Farayi-Explore)                                          | fmyambo@sandtech.com
+| [Maphuthi Matsape]                                                                          | maphuthimatsape@gmail.com
+| [Nomathemba A Maphike]                                                                      | namaphike@gmail.com
+| [Mikateko Chauke]                                                                           | mikaprudence@gmail.com
 
 
 
-#### Additional Resources to create a README file:
-- [Make a README](https://www.makeareadme.com/)
-- [GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
-- [FreeCodeCamp](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
+
