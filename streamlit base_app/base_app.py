@@ -16,10 +16,9 @@ import string
 # Streamlit UI
 import streamlit as st
 
-# Corrected title using st.title()
 st.title("News Classification with Machine Learning")
 
-# If you want the multi-line description, use st.markdown
+# Multi-line description
 st.markdown("""
     - **Objective**: Classify news articles into categories like Business, Technology, Sports, etc.
     - **Data Source**: [Dataset](https://raw.githubusercontent.com/Jana-Liebenberg/2401PTDS_Classification_Project/refs/heads/main/Data/processed/train.csv)
@@ -36,7 +35,7 @@ if page == "Data Preprocessing":
     uploaded_file = st.file_uploader("Upload Your File", type=["csv", "xlsx", "json"])
     
     if uploaded_file is not None:
-        # Try to read the file based on its extension
+        
         file_extension = uploaded_file.name.split('.')[-1]
 
         if file_extension == "csv":
@@ -55,7 +54,7 @@ if page == "Data Preprocessing":
         if 'url' in df.columns:
             df.drop(columns=['url'], inplace=True)
 
-        # Combine text columns (if available) and clean them
+        # Combine text columns (if available) and clean
         if 'headlines' in df.columns and 'description' in df.columns and 'content' in df.columns:
             df['combined_text'] = df['headlines'] + ' ' + df['description'] + ' ' + df['content']
             df['combined_text'] = df['combined_text'].str.lower()
@@ -63,7 +62,7 @@ if page == "Data Preprocessing":
         else:
             st.error("Required text columns ('headlines', 'description', 'content') not found in the dataset.")
         
-        # Show a preview of the cleaned data
+        # Preview of the cleaned data
         st.write(df[['combined_text']].head())
 
         # Store the cleaned data in session state
@@ -126,7 +125,7 @@ if page == "Model Training & Evaluation":
 
 # Page: Word Cloud
 if page == "Word Cloud":
-    # Ensure that data has been uploaded and preprocessed before proceeding
+    
     if 'df' in st.session_state and 'vectorizer' in st.session_state:
         df = st.session_state.df  # Retrieve the data from session state
         st.write("### Word Cloud for Frequent Terms")
@@ -141,7 +140,7 @@ if page == "Word Cloud":
 
 # Page: Top Frequent Words
 if page == "Top Frequent Words":
-    # Ensure that data has been uploaded and preprocessed before proceeding
+    
     if 'df' in st.session_state and 'vectorizer' in st.session_state:
         df = st.session_state.df  # Retrieve the data from session state
         st.write("### Top 10 Most Frequent Words")
@@ -164,7 +163,7 @@ if page == "Predict Category":
     st.write("### Predict the Category of a News Article")
     user_input = st.text_area("Enter a news article content:")
     if user_input:
-        # Ensure that data and models are ready for prediction
+        
         if 'df' in st.session_state and 'vectorizer' in st.session_state and 'log_reg' in st.session_state and 'label_encoder' in st.session_state:
             input_tfidf = st.session_state.vectorizer.transform([user_input])
             prediction = st.session_state.log_reg.predict(input_tfidf)
